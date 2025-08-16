@@ -2,43 +2,43 @@
 
 @font-face {
     font-family: 'OffBit-101';
-    src: url('assets/font/OffBit-101.ttf') format('ttf');
+    src: url('assets/font/OffBit-101.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }     
 @font-face {
     font-family: 'OffBit-101Bold';
-    src: url('assets/font/OffBit-101Bold.ttf') format('ttf');
+    src: url('assets/font/OffBit-101Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }     
 @font-face {
     font-family: 'OffBit-Bold';
-    src: url('assets/font/OffBit-Bold.ttf') format('ttf');
+    src: url('assets/font/OffBit-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }     
 @font-face {
     font-family: 'OffBit-Dot';
-    src: url('assets/font/OffBit-Dot.ttf') format('ttf');
+    src: url('assets/font/OffBit-Dot.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }     
 @font-face {
     font-family: 'OffBit-DotBold';
-    src: url('assets/font/OffBit-DotBold.ttf') format('ttf');
+    src: url('assets/font/OffBit-DotBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }     
 @font-face {
     font-family: 'OffBit-Regular';
-    src: url('assets/font/OffBit-Regular.ttf') format('ttf');
+    src: url('assets/font/OffBit-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }     
   
 body {
-    font-family: 'OffBit', sans-serif;
+    font-family: 'OffBit-101', sans-serif;
 }
 $FontBig: 'OffBit-101', 'Arial Black', Gadget, sans-serif;
 $FontSml: 'OffBit-DotBold', 'Arial', sans-serif;
