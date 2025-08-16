@@ -1,0 +1,61 @@
+// google font import
+
+@font-face {
+    font-family: 'OffBit-101';
+    src: url('assets/font/OffBit-101.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}     
+@font-face {
+    font-family: 'OffBit-101Bold';
+    src: url('assets/font/OffBit-101Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}     
+@font-face {
+    font-family: 'OffBit-Bold';
+    src: url('assets/font/OffBit-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}     
+@font-face {
+    font-family: 'OffBit-Dot';
+    src: url('assets/font/OffBit-Dot.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}     
+@font-face {
+    font-family: 'OffBit-DotBold';
+    src: url('assets/font/OffBit-DotBold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}     
+@font-face {
+    font-family: 'OffBit-Regular';
+    src: url('assets/font/OffBit-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}     
+  
+body {
+    font-family: 'OffBit', sans-serif;
+}
+$FontBig: 'OffBit-101', 'Arial Black', Gadget, sans-serif;
+$FontSml: 'OffBit-DotBold', 'Arial', sans-serif;
+
+
+// Colors
+// $clr-White: #F2F2F2;
+$clr-White: #f8f7ff;
+// $clr-Black:#011826;
+// $clr-Black: #272a28;
+$clr-Black: #26282B;
+// $clr-Yellow: #EEF280;
+$clr-Yellow: #fe9bff;
+$clr-Grey: #ECE2D0;
+$clr-DarkGrey: #18222B;
+$clr-gradient: linear-gradient(90deg, rgba(19,112,181,1) 0%, rgba(97,47,140,1) 50%, rgba(194,26,136,1) 100%);
+
+// Break point
+$pcSize: 1200px;
+$mobileSize: 767px;

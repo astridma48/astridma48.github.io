@@ -1,0 +1,218 @@
+.footer {
+    position: relative;
+    z-index: 99;
+    padding: 12vw 0 6vw;
+    background-color: $clr-Black;
+    color: $clr-White;
+
+    @include media($mobileSize) {
+        padding: 6vw 0 3vw;
+    }
+
+    &__row01 {
+        @include flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto 5vw;
+
+        @include media($mobileSize) {
+            width: 95%;
+            justify-content: space-around;
+
+            &:last-child {
+                display: block;
+            }
+        }
+
+        &:last-child {
+            margin: 0 auto 0;
+        }
+
+        &--item {
+            @include flex;
+            justify-content: flex-start;
+        }
+
+        &--itemImg {
+            width: 12vw;
+            margin: 0 2vw 0 0;
+
+            @include media($mobileSize) {
+                width: calc(25% - 2vw);
+            }
+        }
+
+        &--itemDesc {
+            width: 50%;
+
+            @include media($mobileSize) {
+                width: 95%;
+            }
+        }
+
+        &--itemTItle {
+            font-size: calc(1px + (22 - 1) * ((100vw - 300px) / (1600 - 768)));
+            font-family: $FontBig;
+            line-height: 90%;
+            margin: 0 0 20px;
+            mix-blend-mode: normal;
+
+            @include media($mobileSize) {
+                font-size: 4.5vw;
+                margin: 0 0 10px;
+            }
+        }
+
+        &--itemSubtitle {
+            font-size: calc(1px + (10 - 1) * ((100vw - 300px) / (1600 - 768)));
+            font-family: $FontSml;
+            font-weight: 400;
+            mix-blend-mode: normal;
+
+            @include media($mobileSize) {
+                font-size: 3.8vw;
+            }
+        }
+
+        &--itemLink {
+            // @include flex;
+            display: block;
+            width: max-content;
+            font-size: calc(1px + (14 - 1) * ((100vw - 300px) / (1600 - 768)));
+            font-family: $FontSml;
+            color: $clr-White;
+            font-weight: 600;
+            align-items: center;
+            text-align: center;
+            margin: 0 0 0 auto;
+
+            @include media($mobileSize) {
+                font-size: 4.5vw;
+                margin: 0 auto;
+            }
+    
+            &:after {
+                content: "";
+                display: block;
+                width: calc(1px + (28 - 1) * ((100vw - 300px) / (1600 - 768)));
+                height: calc(1px + (28 - 1) * ((100vw - 300px) / (1600 - 768)));
+                // background-image: url(../img/arrow-alt.svg);
+                background-image: url(../img/arrow.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                @include transition;
+                margin: 12px auto 0;
+
+                @include media($mobileSize) {
+                    width: calc(1px + (32 - 1) * ((100vw - 300px) / 100));
+                    height: calc(1px + (32 - 1) * ((100vw - 300px) / 100));
+                }
+            }
+            
+            &:hover {
+                &:after {
+                    animation: pulse .8s;
+                }
+            }
+        }
+
+        &--itemLink02 {
+            font-size: calc(1px + (10 - 1) * ((100vw - 300px) / (1600 - 768)));
+            font-family: $FontSml;
+            color: $clr-White;
+            font-weight: 600;
+
+            @include media($mobileSize) {
+                font-size: 3.8vw;
+                margin: 0 0 2vw 0;
+                display: block;
+            }
+        }
+
+        &--itemList {
+            @include flex;
+
+            @include media($mobileSize) {
+                justify-content: flex-start;
+                margin: 0 0 2vw 0;
+            }
+        }
+
+        &--itemListLink {
+            font-size: calc(1px + (10 - 1) * ((100vw - 300px) / (1600 - 768)));
+            font-family: $FontSml;
+            color: $clr-White;
+            font-weight: 600;
+            margin: 0 5px;
+
+            @include media($mobileSize) {
+                font-size: 3.8vw;
+                margin: 0 2vw 0 0;
+            }
+        }
+
+        &--itemListLinkIcon {
+            display: block;
+            width: 3vw;
+
+            @include media($mobileSize) {
+                width: 10vw;
+            }
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        font-family: $FontSml;
+        color: $clr-DarkGrey;
+        font-weight: 400;
+        display: block;
+        padding: 6px 0;
+
+        @include media($mobileSize) {
+            font-size: 10px;
+        }
+    }
+
+    &__toTop {
+        display: block;
+        width: 3vw;
+        height: 3vw;
+        background-image: url(../img/arrow-up.svg);
+        background-size: 2.6vw;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        position: fixed;
+        right: 6vw;
+        bottom: 0;
+        @include transition;
+        backdrop-filter: blur(8.3px);
+        -webkit-backdrop-filter: blur(8.3px);
+        // padding: 4vw 2vw 0;
+        border-radius: 100px 100px 0 0;
+        opacity: .5;
+        transform-origin: bottom;
+
+        @include media($mobileSize) {
+            right: 5vw;
+            width: 6vw;
+            height: 9vw;
+            background-size: 5vw;
+        }
+        
+        &:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        &--on {
+            position: absolute;
+            top: -4vw;
+
+            @include media($mobileSize) {
+                top: -9vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+.header {
+
+    display: block;
+
+    &__logo {
+        position: absolute;
+        left: 3vw;
+        top: 5vh;
+        z-index: 998;
+        width: 4rem;
+        height: auto;
+        @include transition;
+
+        &:hover {
+            transform: scale(1.08);
+        }
+
+        @include media($mobileSize) {
+            width: 3rem;
+            height: auto;
+        }
+    }
+    
+    &__bIcon {
+        display: inline-block;
+        cursor: pointer;
+        @include transition;
+        position: fixed;
+        right: 3vw;
+        top: 5vh;
+        z-index: 999;
+
+        &:hover {
+            
+        }
+
+        &.menu-off {
+
+        }
+    }
+    
+
+    &__bIconBar {
+        content: "";
+        display: block;
+        margin: 6px 0;
+        width: 3em;
+        height: 3px;
+        // background-color: $clr_Black;
+        background: rgb(19,112,181);
+        background: -moz-linear-gradient(140deg, rgba(19,112,181,1) 0%, rgba(97,47,140,1) 50%, rgba(194,26,136,1) 100%);
+        background: -webkit-linear-gradient(140deg, rgba(19,112,181,1) 0%, rgba(97,47,140,1) 50%, rgba(194,26,136,1) 100%);
+        background: linear-gradient(140deg, rgba(19,112,181,1) 0%, rgba(97,47,140,1) 50%, rgba(194,26,136,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1370b5",endColorstr="#c21a88",GradientType=1);
+        @include transition;
+
+        &.menu-on {
+            background-color: $clr_Yellow;
+
+            &:first-child {
+                
+            }
+        }
+    }
+    &__menuWindowDrop {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        position: fixed;
+        top: 0;
+        right: -200%;
+        z-index: 997;
+        filter: blur(10px);
+        background: rgba(255, 255, 255, 0.49);
+        backdrop-filter: blur(8.3px);
+        -webkit-backdrop-filter: blur(8.3px);
+        @include transition;
+
+        &.menuDrop-on {
+            right: 0;
+        }
+
+        @include media($mobileSize) {
+            
+        }
+    }
+
+    &__menuWindow {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -200%;
+        padding: 12vh 3vw 0;
+        @include transition;
+        background-color: $clr-Black;
+        // background-color: $clr-White;
+        z-index: 998;
+        text-align: right;
+
+        clip-path: polygon(0 100%, 0 0%, 20% 100%, 30% 100%, 10% 0%, 100% 0%, 100% 100%);
+
+        @include media($mobileSize) {
+            padding: 30vw 3vw 0;
+            clip-path: polygon(0 100%, 0 10%, 30% 100%, 50% 100%, 15% 0%, 100% 0%, 100% 100%);
+        }
+
+        &.menuItem-on {
+            right: 0;
+        }
+
+        &--item {
+            font-size: 12vh;
+            font-family: $FontBig;
+            font-weight: 900;
+            color: $clr-White;
+            // color: $clr-Black;
+
+            @include media($mobileSize) {
+                font-size: 10vw;
+                margin: 4vw 0;
+                display: block;
+            }
+
+            &.link-on {
+                // color: $clr_Yellow;
+                background: rgb(19,112,181);
+                background: -moz-linear-gradient(140deg, rgba(19,112,181,1) 0%, rgba(97,47,140,1) 50%, rgba(194,26,136,1) 100%);
+                background: -webkit-linear-gradient(140deg, rgba(19,112,181,1) 0%, rgba(97,47,140,1) 50%, rgba(194,26,136,1) 100%);
+                background: linear-gradient(140deg, rgba(19,112,181,1) 0%, rgba(97,47,140,1) 50%, rgba(194,26,136,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                pointer-events: none;
+            }
+        }
+    }
+}
