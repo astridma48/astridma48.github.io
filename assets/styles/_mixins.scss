@@ -10,11 +10,6 @@
 	transition: all .4s cubic-bezier(.4,0,.8,.7);
 }
 
-@mixin transition02 {
-	// transition: all .4s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-	transition: all .4s linear;
-}
-
 @mixin hoverOpacity {
 	&:hover {
 		opacity: .8;
@@ -27,7 +22,7 @@
 	margin: 0 auto;
 }
 
-// breakoint
+// breakpoint
 @mixin media($breakPoint) {
 	@media screen and (max-width: $breakPoint){
 		@content;

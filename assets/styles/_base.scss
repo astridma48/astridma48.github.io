@@ -42,25 +42,48 @@ body {
 	position: relative;
 	margin:0 auto;
 	scroll-behavior: smooth !important;
-	background-color: $clr-White !important;
+	background-color: $clr-Black !important;
+	color: $clr-White;
 }
 
 h1,h2,h3,h4,h5,h6,p {
-	mix-blend-mode: multiply;
+	color: $clr-White;
+	line-height: 1;
+	font-weight: 100;
+	font-weight: normal;
+	mix-blend-mode: exclusion;
 }
 
 ul {
 	padding: 0;
 	list-style: none;
+	color: $clr-White;
+	ul {
+		padding: 0 0 0 1vw ;
+	}
 }
 li,ol {
 	list-style: none;
+	color: $clr-White;
+	font-size: 1.263vw;
+	position: relative;
+	padding: 0 0 0 1.618vw;
+	word-break: break-all;
+	&::before {
+		content: "└";
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 }
 
 a {
 	text-decoration: none;
 	@include transition;
 	@include hoverOpacity;
+	line-height: 1;
+	position: relative;
+	z-index: 1;
 }
 
 img {
@@ -84,12 +107,13 @@ body {
 
 main {
 	padding: 0 1.823vw;
+	position: relative;
+	overflow: hidden;
 }
 
 section {
 	width:100%;
 	position: relative;
-	line-height: 1.7;
 }
 
 table {
@@ -98,7 +122,14 @@ table {
 }
 
 p {
-	font-family: $FontSml;
+	color: $clr-White;
+	font-size: 1.263vw;
+	margin: 0 0 1.263vw;
+	line-height: 1.618;
+	font-weight: 100;
+	font-weight: normal;
+	mix-blend-mode: exclusion;
+	text-align: justify;
 }
 
 .dis-PcOnly {

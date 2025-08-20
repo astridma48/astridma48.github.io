@@ -1,218 +1,114 @@
 .footer {
-    position: relative;
-    z-index: 99;
-    padding: 12vw 0 6vw;
-    background-color: $clr-Black;
-    color: $clr-White;
-
-    @include media($mobileSize) {
-        padding: 6vw 0 3vw;
+    margin: 12vw 0;
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    
+    &--inner01 {
+        @include flex;
+        width: 64.95vw;
+        text-align: right;
+        margin: 0 auto;
     }
 
-    &__row01 {
-        @include flex;
-        justify-content: space-between;
-        width: 80%;
-        margin: 0 auto 5vw;
+    &--inner01Text01 {
+        text-align: right;
+    }
 
-        @include media($mobileSize) {
-            width: 95%;
-            justify-content: space-around;
+    &--inner01Text02 {
+        text-align: right;
+    }
 
-            &:last-child {
-                display: block;
-            }
-        }
 
-        &:last-child {
-            margin: 0 auto 0;
-        }
+    &--inner01Text03 {
+        text-align: right;
+    }
 
-        &--item {
-            @include flex;
-            justify-content: flex-start;
-        }
 
-        &--itemImg {
-            width: 12vw;
-            margin: 0 2vw 0 0;
+    &--inner02 {
+        display: block;
+        margin: 8vw auto;
+        width: 64.95vw;
+        text-align: right;
+    }
 
-            @include media($mobileSize) {
-                width: calc(25% - 2vw);
-            }
-        }
+    &--inner02Title {
+        font-size: 5.421vw;
+    }
 
-        &--itemDesc {
-            width: 50%;
+    &--innerLink01 {
+        position: relative;
+        z-index: 99;
+        color: $clr-DarkGray;
+        font-size: 3.947vw;
+        display: block;
+        width: max-content;
+        margin: 0 0 0 auto;
+        cursor: pointer;
+        font-family: "DotGothic16", 'Arial', sans-serif;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        @include transition;
 
-            @include media($mobileSize) {
-                width: 95%;
-            }
-        }
 
-        &--itemTItle {
-            font-size: calc(1px + (22 - 1) * ((100vw - 300px) / (1600 - 768)));
-            font-family: $FontBig;
-            line-height: 90%;
-            margin: 0 0 20px;
-            mix-blend-mode: normal;
-
-            @include media($mobileSize) {
-                font-size: 4.5vw;
-                margin: 0 0 10px;
-            }
-        }
-
-        &--itemSubtitle {
-            font-size: calc(1px + (10 - 1) * ((100vw - 300px) / (1600 - 768)));
-            font-family: $FontSml;
-            font-weight: 400;
-            mix-blend-mode: normal;
-
-            @include media($mobileSize) {
-                font-size: 3.8vw;
-            }
-        }
-
-        &--itemLink {
-            // @include flex;
+        &:before {
+            content: "click to copy";
+            position: absolute;
+            top: 10%;
+            left: 0;
+            bottom: 0.618vw;
             display: block;
+            font-size: .85vw;
             width: max-content;
-            font-size: calc(1px + (14 - 1) * ((100vw - 300px) / (1600 - 768)));
-            font-family: $FontSml;
+            overflow: hidden;
+            @include transition;
+            transition-delay: .2s;
+            opacity: 0;
+        } 
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 2.947vw;
+            height: 2.947vw;
+            background-image: url(../img/copy--icon.svg);
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 0 0 0 1.618vw;
+        }
+
+        &:hover {
+            filter: drop-shadow(0 0 5px white) brightness(0) invert(1);
+
+            &:before {
+                opacity: 1;
+                top: 0;
+            }        
+        }
+        &.copied:before {
+          content: "Copied!";
+          @include transition;
+        }
+    }
+
+    &--innerLink02 {
+        color: $clr-DarkGray;
+        font-size: 2.439vw;
+        display: block;
+        width: max-content;
+        margin: 0 0 0 auto;
+
+        &:hover {
             color: $clr-White;
-            font-weight: 600;
-            align-items: center;
-            text-align: center;
-            margin: 0 0 0 auto;
-
-            @include media($mobileSize) {
-                font-size: 4.5vw;
-                margin: 0 auto;
-            }
-    
-            &:after {
-                content: "";
-                display: block;
-                width: calc(1px + (28 - 1) * ((100vw - 300px) / (1600 - 768)));
-                height: calc(1px + (28 - 1) * ((100vw - 300px) / (1600 - 768)));
-                // background-image: url(../img/arrow-alt.svg);
-                background-image: url(../img/arrow.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                @include transition;
-                margin: 12px auto 0;
-
-                @include media($mobileSize) {
-                    width: calc(1px + (32 - 1) * ((100vw - 300px) / 100));
-                    height: calc(1px + (32 - 1) * ((100vw - 300px) / 100));
-                }
-            }
-            
-            &:hover {
-                &:after {
-                    animation: pulse .8s;
-                }
-            }
-        }
-
-        &--itemLink02 {
-            font-size: calc(1px + (10 - 1) * ((100vw - 300px) / (1600 - 768)));
-            font-family: $FontSml;
-            color: $clr-White;
-            font-weight: 600;
-
-            @include media($mobileSize) {
-                font-size: 3.8vw;
-                margin: 0 0 2vw 0;
-                display: block;
-            }
-        }
-
-        &--itemList {
-            @include flex;
-
-            @include media($mobileSize) {
-                justify-content: flex-start;
-                margin: 0 0 2vw 0;
-            }
-        }
-
-        &--itemListLink {
-            font-size: calc(1px + (10 - 1) * ((100vw - 300px) / (1600 - 768)));
-            font-family: $FontSml;
-            color: $clr-White;
-            font-weight: 600;
-            margin: 0 5px;
-
-            @include media($mobileSize) {
-                font-size: 3.8vw;
-                margin: 0 2vw 0 0;
-            }
-        }
-
-        &--itemListLinkIcon {
-            display: block;
-            width: 3vw;
-
-            @include media($mobileSize) {
-                width: 10vw;
-            }
+            text-shadow: 0 .16vw 20px $clr-White;
         }
     }
 
     &__copyright {
+        display: block;
+        width: 100%;
         text-align: center;
-        font-family: $FontSml;
-        color: $clr-DarkGrey;
-        font-weight: 400;
-        display: block;
-        padding: 6px 0;
-
-        @include media($mobileSize) {
-            font-size: 10px;
-        }
-    }
-
-    &__toTop {
-        display: block;
-        width: 3vw;
-        height: 3vw;
-        background-image: url(../img/arrow-up.svg);
-        background-size: 2.6vw;
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        position: fixed;
-        right: 6vw;
-        bottom: 0;
-        @include transition;
-        backdrop-filter: blur(8.3px);
-        -webkit-backdrop-filter: blur(8.3px);
-        // padding: 4vw 2vw 0;
-        border-radius: 100px 100px 0 0;
-        opacity: .5;
-        transform-origin: bottom;
-
-        @include media($mobileSize) {
-            right: 5vw;
-            width: 6vw;
-            height: 9vw;
-            background-size: 5vw;
-        }
-        
-        &:hover {
-            transform: scale(1.1);
-            opacity: 1;
-        }
-
-        &--on {
-            position: absolute;
-            top: -4vw;
-
-            @include media($mobileSize) {
-                top: -9vw;
-            }
-        }
     }
 }

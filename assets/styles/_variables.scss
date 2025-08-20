@@ -1,60 +1,17 @@
 // google font import
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
-@font-face {
-    font-family: 'OffBit-101';
-    src: url('assets/font/OffBit-101.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}     
-@font-face {
-    font-family: 'OffBit-101Bold';
-    src: url('assets/font/OffBit-101Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}     
-@font-face {
-    font-family: 'OffBit-Bold';
-    src: url('assets/font/OffBit-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}     
-@font-face {
-    font-family: 'OffBit-Dot';
-    src: url('assets/font/OffBit-Dot.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}     
-@font-face {
-    font-family: 'OffBit-DotBold';
-    src: url('assets/font/OffBit-DotBold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}     
-@font-face {
-    font-family: 'OffBit-Regular';
-    src: url('assets/font/OffBit-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}     
-  
+/* Example usage */
 body {
-    font-family: 'OffBit-101', sans-serif;
+    font-family: "DotGothic16", 'Arial', sans-serif;
 }
-$FontBig: 'OffBit-101', 'Arial Black', Gadget, sans-serif;
-$FontSml: 'OffBit-DotBold', 'Arial', sans-serif;
-
 
 // Colors
-// $clr-White: #F2F2F2;
-$clr-White: #f8f7ff;
-// $clr-Black:#011826;
-// $clr-Black: #272a28;
-$clr-Black: #26282B;
-// $clr-Yellow: #EEF280;
-$clr-Yellow: #fe9bff;
-$clr-Grey: #ECE2D0;
-$clr-DarkGrey: #18222B;
-$clr-gradient: linear-gradient(90deg, rgba(19,112,181,1) 0%, rgba(97,47,140,1) 50%, rgba(194,26,136,1) 100%);
+$clr-White: #F2F2F2;
+$clr-Black: #0D0D0D;
+$clr-DarkGray: #1E1E1E;
+$clr-LightGray: #a6a6a6;
+
 
 // Break point
 $pcSize: 1200px;
