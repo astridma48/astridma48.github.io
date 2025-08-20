@@ -1,5 +1,8 @@
-.footer {
-    margin: 12vw 0;
+.footer {    
+    position: relative;
+    z-index: 99999;
+    background: $clr-Black;
+    padding: 12vw 0 0;
     @include flex;
     flex-wrap: wrap;
     justify-content: end;
@@ -12,15 +15,18 @@
     }
 
     &--inner01Text01 {
+        width: 25%;
         text-align: right;
     }
 
     &--inner01Text02 {
+        width: 25%;
         text-align: right;
     }
 
 
     &--inner01Text03 {
+        width: 50%;
         text-align: right;
     }
 

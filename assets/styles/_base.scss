@@ -67,7 +67,7 @@ li,ol {
 	color: $clr-White;
 	font-size: 1.263vw;
 	position: relative;
-	padding: 0 0 0 1.618vw;
+	padding: 0 0 0 1.425vw;
 	word-break: break-all;
 	&::before {
 		content: "└";
@@ -106,7 +106,7 @@ body {
 }
 
 main {
-	padding: 0 1.823vw;
+	// padding: 0 1.823vw;
 	position: relative;
 	overflow: hidden;
 }
@@ -125,7 +125,7 @@ p {
 	color: $clr-White;
 	font-size: 1.263vw;
 	margin: 0 0 1.263vw;
-	line-height: 1.618;
+	line-height: 1.425;
 	font-weight: 100;
 	font-weight: normal;
 	mix-blend-mode: exclusion;
