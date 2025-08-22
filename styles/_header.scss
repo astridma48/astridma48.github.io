@@ -1,0 +1,61 @@
+.header {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: block;
+    z-index: 999;
+    margin: 0 .618vw 1.618vw auto;
+            
+    @include media($mobileSize) {
+
+    }
+
+    &--link {
+        display: block;
+        color: $clr-LightGray;
+        font-size: 2.439vw;
+        width: max-content;
+        margin: 0 0 1.618vw auto;
+            
+        @include media($mobileSize) {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 5.8vw;
+            filter: drop-shadow(0 0 1px white) brightness(0) invert(1);
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            color: $clr-White;
+            filter: drop-shadow(0 0 5px white) brightness(0) invert(1);
+        }
+    }
+}
+
+.hdrToTop {
+    display: block;
+    width: 4vw;
+    height: 4vw;
+    background-image: url("../img/totop.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 9999;
+    bottom: 3%;
+    right: 1%;
+    @include transition;
+
+    &:hover {
+        filter: drop-shadow(0 0 5px white) brightness(0) invert(1);   
+    }
+            
+    @include media($mobileSize) {
+        width: 6vw;
+        height: 6vw;
+    }
+}
