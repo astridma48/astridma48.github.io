@@ -631,7 +631,7 @@ p {
 @media screen and (max-width: 767px) {
   .footer--inner02Title {
     font-size: 10vw;
-    margin: 0 0 4vw;
+    margin: 0 0 6vw;
   }
 }
 
@@ -720,7 +720,13 @@ p {
 
 .footer--innerLink01:hover:before {
   opacity: 1;
-  top: -40%;
+  top: 0%;
+}
+
+@media screen and (max-width: 767px) {
+  .footer--innerLink01:hover:before {
+    top: -40%;
+  }
 }
 
 .footer--innerLink01.copied:before {

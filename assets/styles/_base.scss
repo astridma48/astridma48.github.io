@@ -135,6 +135,7 @@ p {
 	font-weight: normal;
 	mix-blend-mode: exclusion;
 	text-align: justify;
+	
 	@include media($mobileSize) {
 		font-size: 3.6vw;
 	}

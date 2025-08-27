@@ -80,7 +80,7 @@
             
         @include media($mobileSize) {
             font-size: 10vw;
-            margin: 0 0 4vw;
+            margin: 0 0 6vw;
         }
     }
 
@@ -152,7 +152,11 @@
 
             &:before {
                 opacity: 1;
-                top: -40%;
+                top: 0%;
+
+                @include media($mobileSize) {
+                    top: -40%;
+                }
             }        
         }
 
